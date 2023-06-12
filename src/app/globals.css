@@ -2,26 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  body {
+    @apply bg-backgroundColor text-textSecondary;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  .textGradient {
+    background: linear-gradient(
+      89.92deg,
+      #144ee3 -0.02%,
+      #eb568e 18.86%,
+      #a353aa 64.49%,
+      #144ee3 100.67%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  .navbarBrand {
+    background: radial-gradient(
+        95.19% 12441.23% at 5.56% 79.01%,
+        #eb568e 0%,
+        #144ee3 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  .boxShadow {
+    box-shadow: 10px 9px 22px rgba(20, 78, 227, 0.38);
+  }
 }
