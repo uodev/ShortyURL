@@ -18,7 +18,7 @@ export default function Home() {
       <section className="flex flex-1 flex-col justify-center items-center p-32">
         <section className="flex flex-col gap-8 items-center justify-center">
           <div className="flex flex-col gap-3 items-center justify-center">
-            <h1 className="textGradient font-extrabold text-5xl text-center h-14">
+            <h1 className="textGradient font-extrabold text-5xl text-center h-fit py-3">
               Shorten Your Loooong Links
             </h1>
             <p className="w-10/12 text-center">
